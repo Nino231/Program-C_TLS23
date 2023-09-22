@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int pilihan;
+    double nilai;
+
+    cout << "Kalkulator Konversi Satuan\n";
+    do {
+        cout << "Pilih satuan yang ingin Anda konversi:\n";
+        cout << "1. Derajat ke Radian\n";
+        cout << "2. Derajat Celsius ke Fahrenheit\n";
+        cout << "3. Joule ke Kalori\n";
+        cout << "4. Keluar\n";
+        cout << "Pilihan (1/2/3/4): ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                cout << "Masukkan nilai dalam derajat: ";
+                cin >> nilai;
+                cout << "Hasil konversi: " << nilai * (M_PI / 180.0) << " radian" << endl;
+                break;
+            case 2:
+                cout << "Masukkan suhu dalam derajat Celsius: ";
+                cin >> nilai;
+                cout << "Hasil konversi: " << (nilai * 9 / 5) + 32 << " Fahrenheit" << endl;
+                break;
+            case 3:
+                cout << "Masukkan nilai dalam satuan Joule: ";
+                cin >> nilai;
+                cout << "Hasil konversi: " << nilai * 0.24 << " kalori" << endl;
+                break;
+            case 4:
+                cout << "Terimakasih sudah menggunakan program ini!";
+                break;
+            default:
+                cout << "Pilihan tidak valid." << endl;
+                break;
+        }
+    } while (pilihan != 4);
+
+    return 0;
+}
